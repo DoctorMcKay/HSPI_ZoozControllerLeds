@@ -1,0 +1,2 @@
+HSPI_ZoozControllerLeds.exe,.,0
+HSPI_ZoozControllerLeds.exe.config,.,0

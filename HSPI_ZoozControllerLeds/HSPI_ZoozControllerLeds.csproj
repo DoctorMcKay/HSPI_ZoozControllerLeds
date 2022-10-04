@@ -58,6 +58,10 @@
         <Compile Include="StatusLedAction.cs" />
     </ItemGroup>
     <ItemGroup>
+      <None Include="..\HSPI_ZoozControllerLeds.config">
+        <Link>HSPI_ZoozControllerLeds.config</Link>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Include="packages.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
