@@ -15,6 +15,8 @@ namespace HSPI_ZoozControllerLeds {
 		public IHsController HsController => HomeSeerSystem;
 		public readonly List<int> ZoozDevices = new List<int>();
 
+		private bool _debugLogging = false;
+
 		protected override void Initialize() {
 			WriteLog(ELogType.Debug, "Initialize");
 			
