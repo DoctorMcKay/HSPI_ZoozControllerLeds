@@ -52,7 +52,7 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: iRobot_${{ env.release_version }}
+        name: ZoozControllerLeds_${{ env.release_version }}
         path: artifacts
     
     - name: Upload debug artifacts
