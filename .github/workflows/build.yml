@@ -37,7 +37,7 @@ jobs:
       run: |
         mkdir artifacts
         cp HSPI_ZoozControllerLeds\bin\Release\HSPI_ZoozControllerLeds.exe artifacts\HSPI_ZoozControllerLeds.exe
-        cp HSPI_IRobot\bin\Release\HSPI_ZoozControllerLeds.exe.config artifacts\HSPI_ZoozControllerLeds.exe.config
+        cp HSPI_ZoozControllerLeds\bin\Release\HSPI_ZoozControllerLeds.exe.config artifacts\HSPI_ZoozControllerLeds.exe.config
         cp install.txt artifacts\install.txt
         $release_version = (Get-ChildItem -Filter "artifacts\HSPI_ZoozControllerLeds.exe" | Select-Object -ExpandProperty VersionInfo).FileVersion.Replace('.', '-')
         echo "release_version=$release_version"
@@ -46,8 +46,8 @@ jobs:
     - name: Stage debug artifacts
       run: |
         mkdir artifacts-debug
-        cp HSPI_IRobot\bin\Debug\HSPI_ZoozControllerLeds.exe artifacts-debug\HSPI_ZoozControllerLeds.exe
-        cp HSPI_IRobot\bin\Debug\HSPI_ZoozControllerLeds.exe.config artifacts-debug\HSPI_ZoozControllerLeds.exe.config
+        cp HSPI_ZoozControllerLeds\bin\Debug\HSPI_ZoozControllerLeds.exe artifacts-debug\HSPI_ZoozControllerLeds.exe
+        cp HSPI_ZoozControllerLeds\bin\Debug\HSPI_ZoozControllerLeds.exe.config artifacts-debug\HSPI_ZoozControllerLeds.exe.config
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
